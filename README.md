@@ -6,7 +6,7 @@
 
 - 安装python
 
-安装python3，进入地址https://www.python.org/downloads/下载安装包，下载完成后点击安装，这里安装3.7版本。
+安装python3，进入地址[https://www.python.org/downloads/](https://www.python.org/downloads/)下载安装包，下载完成后点击安装，这里安装3.7版本。
 
 - 更改python对应版本
 
