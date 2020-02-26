@@ -75,13 +75,21 @@ verify_ssl = true
 - 安装基础包
 
 ```python
-# 进入虚拟环境
+# 如果使用virtualenv，进入虚拟环境
 source venv/bin/activate
 
 pip3 install aiohttp     # 异步框架
 pip3 install jinja2      # 前端模板引擎
 pip3 install aiomysql    # MySQL的Python异步驱动程序
+
+# 如果使用pipenv
+pipenv shell
+pipenv install aiohttp
+pipenv install jinja2
+pipenv install aiomysql
 ```
+
+一下虚拟环境都使用pipenv，所有代码以pipenv为示例。
 
 - 搭建基本项目目录
 
