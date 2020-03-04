@@ -1,11 +1,17 @@
+--  创建用户，使用用户名username，密码password创建用户
+-- CREATE USER 'username'@'host' IDENTIFIED BY 'password';
+CREATE USER 'admin'@'%' IDENTIFIED BY 'admin123';
+
+-- 如果数据库存在则删除数据库
 drop database if exists awesome;
-
+-- 创建数据库
 create database awesome;
-
+-- 使用数据库
 use awesome;
+-- 赋予root用户增删改查的权限
+grant select, insert, update, delete,create on awesome.* to 'admin'@'%';
 
-grant select, insert, update, delete on awesome.* to 'www-data'@'localhost' identified by 'www-data';
-
+-- 创建users表
 create table users (
     `id` varchar(50) not null,
     `email` varchar(50) not null,
@@ -19,6 +25,7 @@ create table users (
     primary key (`id`)
 ) engine=innodb default charset=utf8;
 
+-- 创建blogs表
 create table blogs (
     `id` varchar(50) not null,
     `user_id` varchar(50) not null,
@@ -32,6 +39,7 @@ create table blogs (
     primary key (`id`)
 ) engine=innodb default charset=utf8;
 
+-- 创建comments表
 create table comments (
     `id` varchar(50) not null,
     `blog_id` varchar(50) not null,
